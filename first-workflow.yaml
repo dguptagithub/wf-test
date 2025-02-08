@@ -1,21 +1,11 @@
-name: First Workflow 
-
-on: 
-  push:  
-    branches:
-      - main  # Ensure it triggers only on main branch
-
-jobs: 
+on: [push]
+jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Echo a string
+      - name: echo a string
         run: echo "Hello World"
-
-      - name: Show Node and NPM versions
+      - name: Multiline Command
         run: |
           node -v
           npm -v
